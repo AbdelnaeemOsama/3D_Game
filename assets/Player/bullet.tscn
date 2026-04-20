@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d3n4aic2o7kn0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4046"]
+albedo_color = Color(1, 1, 0.1764706, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_75dqj"]
+size = Vector3(0.1, 0.05, 0.5)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jbtjr"]
+radius = 0.084472656
+height = 0.71191406
+
+[node name="bullet" type="Area3D" unique_id=1178675689]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=158554822]
+material_override = SubResource("StandardMaterial3D_o4046")
+mesh = SubResource("BoxMesh_75dqj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2010322188]
+transform = Transform3D(1, 0, 0, 0, 0.0060038962, 0.999982, 0, -0.999982, 0.0060038962, 0.0364393, 0.012861604, 0.012206808)
+shape = SubResource("CapsuleShape3D_jbtjr")
